@@ -1,5 +1,5 @@
-z<br/>
-<a href="https://httpie.io" target="blank_">
+<br/>
+<a href="https://github.com/philipempl/ResearchyPi" target="blank_">
     <img height="100" alt="HTTPie" src="https://raw.githubusercontent.com/philipempl/researchypie/master/resources/logo.png" />
 </a>
 <br/>
