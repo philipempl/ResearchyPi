@@ -13,20 +13,28 @@
 
 ## Getting started
 
+### Update and upgrade the RPI
 ```shell
 sudo apt-get update
 sudo apt-get upgrade
+```
 
-sudo apt install python3 idle3
-sudo apt-get install python3-pip
-
+### Install git and clone this repository
+```shell
 sudo apt-get install git
 git clone https://github.com/philipempl/ResearchyPi.git
 cd ./ ResearchyPi
-
+```
+### Install python, pip and all dependencies
+```shell
+sudo apt install python3 idle3
+sudo apt-get install python3-pip
 sudo pip3 install -r requirements.txt
 python3 ./setup.py
+```
 
+### Test the app
+```
 python3 ./main.py
 ```
 
