@@ -27,6 +27,7 @@ cd ./ ResearchyPi
 ```
 ### Install python, pip and all dependencies
 ```shell
+sudo apt-get install libopenjp2-7
 sudo apt install python3 idle3
 sudo apt-get install python3-pip
 sudo pip3 install -r requirements.txt
