@@ -1,6 +1,6 @@
 <br/>
 <a href="https://github.com/philipempl/ResearchyPi" target="blank_">
-    <img height="100" alt="HTTPie" src="https://raw.githubusercontent.com/philipempl/researchypie/master/resources/logo.png" />
+    <img height="100" alt="ResearchyPi" src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/logo.png" />
 </a>
 <br/>
 
