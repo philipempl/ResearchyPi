@@ -1,0 +1,4 @@
+scholarly
+numpy
+pillow
+RPi.GPIO
