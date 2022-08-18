@@ -1,11 +1,12 @@
+
+
+# ResearchyPi
 <br/>
 <a href="https://github.com/philipempl/ResearchyPi" target="blank_">
     <img height="200" alt="ResearchyPi" src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/logo.png" />
 </a>
 <br/>
-
-# ResearchyPi: Drawing Google Scholar Stats on the Raspberry
-
+Drawing Google Scholar Stats on the Raspberry
 <img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="40%"/>
 
 ## Getting started
