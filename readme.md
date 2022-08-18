@@ -9,7 +9,7 @@
 [Short Description]
 
 
-<img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/animation.gif" alt="ResearchyPi in action" width="100%"/>
+<img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="100%"/>
 
 ## Getting started
 
