@@ -6,9 +6,6 @@
 
 # ResearchyPi: Drawing Google Scholar Stats on the Raspberry
 
-[Short Description]
-
-
 <img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="100%"/>
 
 ## Getting started
