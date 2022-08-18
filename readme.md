@@ -7,7 +7,7 @@
 
 # Drawing Google Scholar Stats on the Raspberry
 
-<img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="40%"/>
+<img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
 
 ## Getting started
 
