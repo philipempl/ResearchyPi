@@ -1,3 +1,4 @@
+
 <br/>
 <a href="https://github.com/philipempl/ResearchyPi" target="blank_">
     <img height="200" alt="ResearchyPi" src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/logo.png" />
@@ -45,7 +46,36 @@ You can find the scholar identifier in the URL provided by Google scholar after 
 python3 src/main.py Lu-BjV4AAAAJ
 ```
 
+### Updating the stats continuously
+For updating and scheduling your stats automatically, you can define service files using systemd. For instance:
+```shell
+sudo nano /etc/systemd/system/update-stats.service
+```
+The service file itself updating every 14400 second (4 hour interval) looks the following:
 
+```shell
+[Unit]
+Description=ResearchyPi
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=python3 /home/pi/ResearchyPi/main.py SCHOLAR_ID
+
+Restart=always
+RestartSec=14400
+
+[Install]
+WantedBy=multi-user.target
+```
+Then you need to grant rights to the user and enable the systemd file on startup by running the following commands:
+```shell
+sudo chmod 644 /etc/systemd/system/update-stats.service
+sudo systemctl daemon-reload
+sudo systemctl enable update-stats.service
+sudo systemctl start update-stats.service
+```
 ## Contributing
 
 Have a look through existing [Issues](https://github.com/philipempl/researchypi/issues) and [Pull Requests](https://github.com/philipempl/researchypi//pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/philipempl/researchypi/issues) using one of the default templates.
