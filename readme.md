@@ -40,13 +40,13 @@ sudo raspi-config
 Then enable SPI (I4) under interface options (3).
 
 
-### Test the app
+## Run the app
 You can find the scholar identifier in the URL provided by Google scholar after user= and ending with an ampersand.
 ```shell
 python3 src/main.py Lu-BjV4AAAAJ
 ```
 
-### Updating the stats continuously
+## Update the stats continuously
 For updating and scheduling your stats automatically, you can define service files using systemd. For instance:
 ```shell
 sudo nano /etc/systemd/system/update-stats.service
