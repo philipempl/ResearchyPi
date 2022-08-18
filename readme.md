@@ -27,16 +27,25 @@ cd ./ ResearchyPi
 ```
 ### Install python, pip and all dependencies
 ```shell
-sudo apt-get install libopenjp2-7
-sudo apt install python3 idle3
+sudo apt-get install libxslt-dev
 sudo apt-get install python3-pip
-sudo pip3 install -r requirements.txt
-python3 ./setup.py
+sudo apt-get install python3-pil
+sudo pip3 install RPi.GPIO
+sudo pip3 install scholarly
 ```
 
-### Test the app
+### Enable SPI
+Get into the menu using:
+```shell
+sudo raspi-config
 ```
-python3 ./main.py
+Then enable SPI (I4) under interface options (3).
+
+
+### Test the app
+You can find the scholar identifier in the URL provided by Google scholar after user= and ending with an ampersand.
+```shell
+python3 src/main.py Lu-BjV4AAAAJ
 ```
 
 
