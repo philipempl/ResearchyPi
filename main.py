@@ -35,13 +35,13 @@ try:
         result, sections=["basics", "indices", "counts", "publications"]
     )
     author_name = author["name"]
-    author_publications = "Publications: " + str(len(author["publications"]))
+    author_publications = "Articles: " + str(len(author["publications"]))
     author_citations = "Citations: " + str(author["citedby"])
     author_hindex = "H-Index: " + str(author["hindex"])
 
     # drawing on epaper display
     logging.info("Drawing stats on display...")
-    font15 = ImageFont.truetype(os.path.join(picdir, "Font.ttc"), 15)
+    font20 = ImageFont.truetype(os.path.join(picdir, "Font.ttc"), 20)
     font24 = ImageFont.truetype(os.path.join(picdir, "Font.ttc"), 24)
     image = Image.new("1", (epd.height, epd.width), 255)
     bmp = Image.open(os.path.join(picdir, "scholar-icon.bmp"))
@@ -49,9 +49,9 @@ try:
     draw = ImageDraw.Draw(image)
     draw.text((80, 2), author_name, font=font24, fill=0)
     draw.line([(80, 30), (240, 30)], fill=0, width=4)
-    draw.text((80, 40), author_publications, font=font24, fill=0)
-    draw.text((80, 65), author_citations, font=font24, fill=0)
-    draw.text((80, 90), author_hindex, font=font24, fill=0)
+    draw.text((80, 40), author_publications, font=font20, fill=0)
+    draw.text((80, 65), author_citations, font=font20, fill=0)
+    draw.text((80, 90), author_hindex, font=font20, fill=0)
     epd.display(epd.getbuffer(image))
     epd.sleep()
 
