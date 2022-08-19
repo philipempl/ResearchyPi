@@ -7,7 +7,7 @@
 
 # Drawing Google Scholar Stats on RPI Waveshare
 
-<img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
+<img src="https://raw.githubusercontent.com/philipempl/Researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
 
 ## Prerequisites
 
