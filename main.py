@@ -3,14 +3,15 @@ import os
 import argparse
 import logging
 from PIL import Image, ImageDraw, ImageFont
-from scholarly import scholarly
-from waveshare_epd import epd2in13_V2
 
 picdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "resources")
 libdir = os.path.join(os.path.dirname(os.path.realpath(__file__)), "module")
 
 if os.path.exists(libdir):
     sys.path.append(libdir)
+
+from scholarly import scholarly
+from waveshare_epd import epd2in13_V2
 
 logging.basicConfig(level=logging.DEBUG)
 
