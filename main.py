@@ -45,7 +45,7 @@ try:
     font24 = ImageFont.truetype(os.path.join(picdir, "Font.ttc"), 24)
     image = Image.new("1", (epd.height, epd.width), 255)
     bmp = Image.open(os.path.join(picdir, "scholar-icon.bmp"))
-    image.paste(bmp, (0, 25))
+    image.paste(bmp, (0, 0))
     draw = ImageDraw.Draw(image)
     draw.text((80, 2), author_name, font=font24, fill=0)
     draw.line([(80, 30), (240, 30)], fill=0, width=4)
