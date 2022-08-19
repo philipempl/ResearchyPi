@@ -5,9 +5,16 @@
 </a>
 <br/>
 
-# Drawing Google Scholar Stats on the Raspberry
+# Drawing Google Scholar Stats on RPI Waveshare
 
 <img src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
+
+## Prerequisites
+
+| Name                       | Link                                                | Price |
+|----------------------------|----------------------------------------------------|-------|
+| Raspberry Pi Zero WH       | [https://www.berrybase.de/raspberry-pi-zero-wh](https://www.berrybase.de/raspberry-pi-zero-wh)      | $16   |
+| Waveshare 2.13 Display Hat | [https://www.waveshare.com/2.13inch-e-paper-hat.htm](https://www.waveshare.com/2.13inch-e-paper-hat.htm) | $15   |
 
 ## Getting started
 
@@ -23,7 +30,7 @@ sudo apt-get install git
 git clone https://github.com/philipempl/ResearchyPi.git
 cd ./ ResearchyPi
 ```
-### Install python, pip and all dependencies
+### Install python and its dependencies
 ```shell
 sudo apt-get install libxslt-dev
 sudo apt-get install python3-pip
@@ -51,7 +58,7 @@ For updating and scheduling your stats automatically, you can define service fil
 ```shell
 sudo nano /etc/systemd/system/update-stats.service
 ```
-The service file itself updating every 14400 second (4 hour interval) looks the following:
+The service file itself, updating every 14400 seconds (4 hour interval), looks the following:
 
 ```shell
 [Unit]
@@ -78,7 +85,7 @@ sudo systemctl start update-stats.service
 ```
 ## Contributing
 
-Have a look through existing [Issues](https://github.com/philipempl/researchypi/issues) and [Pull Requests](https://github.com/philipempl/researchypi//pulls) that you could help with. If you'd like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/philipempl/researchypi/issues) using one of the default templates.
+Have a look through existing [Issues](https://github.com/philipempl/researchypi/issues) and [Pull Requests](https://github.com/philipempl/researchypi//pulls) that you could help with. If you would like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/philipempl/researchypi/issues) using one of the default templates.
 
 
 ## Authors
