@@ -1,20 +1,21 @@
-
-<br/>
-<a href="https://github.com/philipempl/ResearchyPi" target="blank_">
+<p align="center">
+  <a href="https://github.com/philipempl/ResearchyPi" target="_blank">
     <img height="200" alt="ResearchyPi" src="https://raw.githubusercontent.com/philipempl/researchypi/master/resources/logo.png" />
-</a>
-<br/>
+  </a>
+</p>
 
 # Drawing Google Scholar Stats on RPI Waveshare
 
-<img src="https://raw.githubusercontent.com/philipempl/Researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/philipempl/Researchypi/master/resources/demo.gif" alt="ResearchyPi in action" width="60%"/>
+</p>
 
 ## Prerequisites
 
 | Name                       | Link                                                | Price |
 |----------------------------|----------------------------------------------------|-------|
-| Raspberry Pi Zero WH       | [https://www.berrybase.de/raspberry-pi-zero-wh](https://www.berrybase.de/raspberry-pi-zero-wh)      | $16   |
-| Waveshare 2.13 Display Hat | [https://www.waveshare.com/2.13inch-e-paper-hat.htm](https://www.waveshare.com/2.13inch-e-paper-hat.htm) | $15   |
+| Raspberry Pi Zero WH       | [Get it here](https://www.berrybase.de/raspberry-pi-zero-wh)      | $16   |
+| Waveshare 2.13 Display Hat | [Get it here](https://www.waveshare.com/2.13inch-e-paper-hat.htm) | $15   |
 
 ## Getting started
 
@@ -28,34 +29,39 @@ sudo apt-get upgrade
 ```shell
 sudo apt-get install git
 git clone https://github.com/philipempl/ResearchyPi.git
-cd ./ ResearchyPi
+cd ./ResearchyPi
 ```
-### Install python and its dependencies
+
+### Install Python and its dependencies
 ```shell
 sudo apt-get install libxslt-dev python3-pip python3-pil
 sudo pip3 install RPi.GPIO scholarly
 ```
 
 ### Enable SPI
-Get into the menu using:
+To enable SPI, follow these steps:
+
 ```shell
 sudo raspi-config
 ```
-Then enable SPI (I4) under interface options (3).
 
+Then, navigate to "Interface Options" (Option 3) and enable SPI (I4).
 
 ## Run the app
-You can find the scholar identifier in the URL provided by Google scholar after user= and ending with an ampersand.
+You can find the scholar identifier in the URL provided by Google Scholar after "user=" and ending with an ampersand.
+
 ```shell
 python3 src/main.py Lu-BjV4AAAAJ
 ```
 
 ## Update the stats continuously
-For updating and scheduling your stats automatically, you can define service files using systemd. For instance:
+To update and schedule your stats automatically, create a service file using systemd. For instance:
+
 ```shell
 sudo nano /etc/systemd/system/update-stats.service
 ```
-The service file itself, updating every 14400 seconds (4 hour interval), looks the following:
+
+The service file itself, updating every 14400 seconds (4-hour interval), looks like this:
 
 ```shell
 [Unit]
@@ -73,17 +79,19 @@ RestartSec=14400
 [Install]
 WantedBy=multi-user.target
 ```
-Then you need to grant rights to the user and enable the systemd file on startup by running the following commands:
+
+Then, grant rights to the user and enable the systemd file on startup by running the following commands:
+
 ```shell
 sudo chmod 644 /etc/systemd/system/update-stats.service
 sudo systemctl daemon-reload
 sudo systemctl enable update-stats.service
 sudo systemctl start update-stats.service
 ```
+
 ## Contributing
 
-Have a look through existing [Issues](https://github.com/philipempl/researchypi/issues) and [Pull Requests](https://github.com/philipempl/researchypi//pulls) that you could help with. If you would like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/philipempl/researchypi/issues) using one of the default templates.
-
+If you'd like to contribute, have a look through existing [Issues](https://github.com/philipempl/researchypi/issues) and [Pull Requests](https://github.com/philipempl/researchypi/pulls) that you could help with. If you would like to request a feature or report a bug, please [create a GitHub Issue](https://github.com/philipempl/researchypi/issues) using one of the default templates.
 
 ## Authors
 
@@ -92,3 +100,6 @@ Have a look through existing [Issues](https://github.com/philipempl/researchypi/
 ## License
 
 This project is available under the MIT license.
+```
+
+Feel free to copy and paste this markdown into your GitHub README.md file, and it should create a visually appealing and well-structured README for your project. Make sure to replace `SCHOLAR_ID` with the actual scholar identifier where needed.
