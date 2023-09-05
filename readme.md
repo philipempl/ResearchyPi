@@ -32,11 +32,8 @@ cd ./ ResearchyPi
 ```
 ### Install python and its dependencies
 ```shell
-sudo apt-get install libxslt-dev
-sudo apt-get install python3-pip
-sudo apt-get install python3-pil
-sudo pip3 install RPi.GPIO
-sudo pip3 install scholarly
+sudo apt-get install libxslt-dev python3-pip python3-pil
+sudo pip3 install RPi.GPIO scholarly
 ```
 
 ### Enable SPI
